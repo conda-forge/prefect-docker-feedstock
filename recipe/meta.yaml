@@ -1,5 +1,5 @@
 {% set name = "prefect-docker" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prefect_docker-{{ version }}.tar.gz
-  sha256: 88bfb03330efceb9c36a0868cc016f905610c229f57888b14befb46cabd3b8f7
+  sha256: 8ab3792e4ae66648c39a0c0b58eaf1e9185621c5b36e1f9719530262fe987195
 
 build:
   noarch: python
