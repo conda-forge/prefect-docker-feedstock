@@ -23,8 +23,9 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - prefect >=2.13.5
+    - prefect >=3.0.0
     - docker-py >=6.1.1
+    - exceptiongroup
 
 test:
   imports:
