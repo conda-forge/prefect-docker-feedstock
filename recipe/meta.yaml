@@ -6,28 +6,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prefect_docker-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prefect_docker-{{ version }}.tar.gz
   sha256: cfbcc501730c2ee3ae8e4b446349bcdfce1198c38d75816a115106cba18cc100
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=45
     - wheel
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - prefect >=3.0.0
     - docker-py >=6.1.1
     - exceptiongroup
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - prefect_docker
 # Disable `pip check` until `prefect` adds `pip check` support
