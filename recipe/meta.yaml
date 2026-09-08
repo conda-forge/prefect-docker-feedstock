@@ -1,13 +1,13 @@
 {% set name = "prefect-docker" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prefect_docker-{{ version }}.tar.gz
-  sha256: be9e826343e0128f8d4a35ec6411e3af7866474bedb0c493ad150c2c503c7e13
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/prefect_docker-{{ version }}.tar.gz
+  sha256: cfd4bd5f36d493472a4aa33b48695330a1ba70d022fdf8efc9aba8f9eea20cb3
 
 build:
   noarch: python
